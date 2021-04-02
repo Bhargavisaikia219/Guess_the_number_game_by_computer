@@ -6,6 +6,10 @@ def computer_guess(x,y):
     while feedback !='c':
         guess=random.randint(low, high)
         feedback=input(f"Is {guess} too high(h), too low(l) or correct(c)?")
+        if feedback == 'h':
+            high = guess - 1
+        elif feedback == 'l':
+            low = guess + 1
     print(f"Yay! The computer guessed your number {guess} correctly!!!")
 
 lr=int(input("Enter a range between which you what to guess a random number: lower limit:"))
